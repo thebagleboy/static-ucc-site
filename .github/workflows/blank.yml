@@ -35,5 +35,5 @@ jobs:
         run: ls ${GITHUB_WORKSPACE}
 
       # Runs a set of commands using the runners shell
-     # - name: Deploy to web server
-     #   run: scp -r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-hr
+      - name: Deploy to web server
+        run: scp -r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-html
