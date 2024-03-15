@@ -42,4 +42,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy to web server
-        run: scp -o StrictHostKeyChecking=no-r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-html
+        run: scp -o StrictHostKeyChecking=no -r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-html
