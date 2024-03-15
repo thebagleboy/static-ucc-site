@@ -30,11 +30,10 @@ jobs:
 
       - name: Set up SSH key
         run: mkdir ~/.ssh && touch ~/.ssh/id_rsa && echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo ${GITHUB_WORKSPACE}
+      
+      - name: Show Files
+        run: ls ${GITHUB_WORKSPACE}
 
       # Runs a set of commands using the runners shell
-      - name: Deploy to web server
-        run: scp -r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-hr
+     # - name: Deploy to web server
+     #   run: scp -r ${GITHUB_WORKSPACE}/* ${{ secrets.USER }}@${{ secrets.SERVER }}:~/public-hr
